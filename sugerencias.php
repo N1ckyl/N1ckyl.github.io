@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         file_put_contents($archivo, $contenido, FILE_APPEND | LOCK_EX);
 
         // Redirigir a la página de agradecimiento
-        header("gracias.html");
+        header("Location: gracias.html");
         exit();
     } else {
         // Mensaje de error
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Redirigir al formulario si se accede directamente al archivo PHP
-    header("index.html");
+    header("Location: index.html");
     exit();
 }
 ?>
